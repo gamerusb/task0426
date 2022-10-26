@@ -1,8 +1,10 @@
 public class ClassesAndOdject {
     public static void main(String[] args){
         Person person1 = new Person();
-
-        person1.speak();
+        person1.setAge(-4);
+        person1.setName("");
+        System.out.println("Enter value in the main method " + person1.getName());
+        System.out.println("Enter value in the main method " + person1.getAge());
     }
 }
 
@@ -12,7 +14,11 @@ class Person {
     private int age;
 
     public void setName(String username){
-        name = username;
+        if (username.isEmpty()){
+            System.out.println("You entered an empty name!");
+        }else {
+            name = username;
+        }
     }
 
     public String getName(){
@@ -20,7 +26,11 @@ class Person {
     }
 
     public void setAge(int userAge){
-        age = userAge;
+        if (userAge < 0){
+            System.out.println("Error in your choice");
+        }else {
+            age = userAge;
+        }
     }
 
     public int getAge(){
