@@ -1,19 +1,31 @@
 public class ClassesAndOdject {
     public static void main(String[] args){
         Person person1 = new Person();
-        person1.setNameAndAge("Roman", 20);
-        String s1 = "Vovan";
-        Person person2 = new Person();
-        person2.setNameAndAge(s1,33);
+
         person1.speak();
-        person2.speak();
     }
 }
 
 
 class Person {
-    String name;
-    int age;
+    private String name;
+    private int age;
+
+    public void setName(String username){
+        name = username;
+    }
+
+    public String getName(){
+        return  name;
+    }
+
+    public void setAge(int userAge){
+        age = userAge;
+    }
+
+    public int getAge(){
+        return age;
+    }
 
     void setNameAndAge(String username, int userage){
         name = username;
